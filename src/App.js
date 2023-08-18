@@ -17,6 +17,7 @@ function App() {
           Learn React
         </a> */}
 
+//https://reactchallenges.live/challenge/2 - CHECK FOR CHALLENGES HERE {SETINTERVAL() FOR TIME}
         const [state, setState] = React.useState(true)
         
         function toggle(){
