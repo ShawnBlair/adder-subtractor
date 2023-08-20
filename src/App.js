@@ -57,13 +57,13 @@ const [state, setState] = React.useState([{type:"text", value:""} ])
 const [sate, setSate] = React.useState(false)
 
 const alist = []
-//function checc(){
+function checc(){
   if(alist.length > 0){
     setSate(true)
   }else{
     setSate(false)
   }
-//}
+}
 function display(){  
   setState(state => {state.map(stat => (
     alist.push({...stat, value: stat.value})
@@ -83,7 +83,7 @@ function remove(){
       <header className="App-header">
         <div><input type="text" value=""></input>
         <button onClick={display}>Add</button></div>
-        
+        { sate && <button onClick={remove}>X</button>}
       </header>
     </div>
   );
