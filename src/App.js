@@ -29,11 +29,11 @@ function App() {
         }
 
         function stop(){
-          clearInterval(window.treturn)
+          return clearInterval(window.treturn)
                   }
 
                   function reset(){
-                    clearInterval(window.treturn)
+                    return clearInterval(window.treturn)
                     setState(0)}
 
   return (
