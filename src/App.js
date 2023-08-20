@@ -17,25 +17,40 @@ function App() {
           Learn React
         </a> */}
 
-//https://reactchallenges.live/challenge/2 - CHECK FOR CHALLENGES HERE {SETINTERVAL() FOR TIME}
-        const [state, setState] = React.useState(0)
+// //https://reactchallenges.live/challenge/2 - CHECK FOR CHALLENGES HERE {SETINTERVAL() FOR TIME}
+//         const [state, setState] = React.useState(0)
         
-        function start(){
-          //we're supposed to use useEffect for this but since we're not setInterval will return something
-          //related to the window of the browser ie window.{...} instead of the usual constant i.e const {...}
-           window.treturn = setInterval(() => {
-            setState(state => state + 1)
-                      }, 1000)
-        }
+//         function start(){
+//           //we're supposed to use useEffect for this but since we're not setInterval will return something
+//           //related to the window of the browser ie window.{...} instead of the usual constant i.e const {...}
+//            window.treturn = setInterval(() => {
+//             setState(state => state + 1)
+//                       }, 1000)
+//         }
 
-        function stop(){
-          return clearInterval(window.treturn)
-                  }
+//         function stop(){
+//           return clearInterval(window.treturn)
+//                   }
 
-                  function reset(){
-                    setState(0)
-                    return (clearInterval(window.treturn)
-                    )}
+//                   function reset(){
+//                     setState(0)
+//                     return (clearInterval(window.treturn)
+//                     )}
+
+//                     return (
+//                       <div className="App">
+//                         <header className="App-header">
+//                           <h2>Timer</h2>
+//                           <div className="divuno">
+//                           <span className="hrs">{Math.trunc(state / 60)} hrs : </span>
+//                           <span className="mins">{Math.trunc(state / 60)} mins : </span>
+//                         <span className="secs">{state % 60} secs</span><div className="div2o">
+//                           <button onClick={start} className="start">Start</button>
+//                           <button onClick={reset} className="reset">Reset</button>
+//                           <button onClick={stop} className="stop">Stop</button></div></div>
+//                         </header>
+//                       </div>
+//                     )
 
   return (
     <div className="App">
