@@ -52,10 +52,38 @@ function App() {
 //                       </div>//you can redo the css for this code
 //                     )
 
+
+const [state, setState] = React.useState([{type:"text", value:""} ])
+const [sate, setSate] = React.useState(false)
+
+const alist = []
+//function checc(){
+  if(alist.length > 0){
+    setSate(true)
+  }else{
+    setSate(false)
+  }
+//}
+function display(){  
+  setState(state => {state.map(stat => (
+    alist.push({...stat, value: stat.value})
+  ))
+  return alist} )
+}
+
+function remove(){
+  setState(state => {state.map(stat => (
+    alist.pop({...stat, value: stat.value})
+  ))
+  return alist})
+}
+
   return (
     <div className="App">
       <header className="App-header">
-        <div></div>
+        <div><input type="text" value=""></input>
+        <button onClick={display}>Add</button></div>
+        
       </header>
     </div>
   );
