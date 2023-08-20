@@ -46,9 +46,15 @@
 }
 
 .start {
+  margin-right: 20px;
+}
+
+.stop {
   margin-left: 20px;
 }
 
-.reset {
-  margin-left: 20px;
+.div2o {
+  height: 180px;
+  width: 300px;
+  padding: 30px;
 }
