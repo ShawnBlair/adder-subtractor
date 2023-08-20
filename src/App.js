@@ -53,7 +53,7 @@ function App() {
 //                     )
 
 
-const [state, setState] = React.useState([{type:"text", value:""} ])
+const [state, setState] = React.useState([{type:"text", name:"text", value: ""} ])
 const [sate, setSate] = React.useState(false)
 
 const alist = []
@@ -62,11 +62,11 @@ function checc(){
     setSate(true)
   }else{
     setSate(false)
-  }
+  } return sate
 }
 function display(){  
   setState(state => {state.map(stat => (
-    alist.push({...stat, value: ""})
+    alist.push({...stat, value: stat.value})
   ))
   return alist} )
 }
@@ -81,7 +81,7 @@ function remove(){
   return (
     <div className="App">
       <header className="App-header">
-        <div><input type="text" ></input>
+        <div><input type="text" name="text"></input>
         <button onClick={display}>Add</button></div>
         { sate && <button onClick={remove}>X</button>}
       </header>
