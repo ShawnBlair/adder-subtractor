@@ -33,8 +33,9 @@ function App() {
                   }
 
                   function reset(){
-                    return clearInterval(window.treturn)
-                    setState(0)}
+                    setState(0)
+                    return (clearInterval(window.treturn)
+                    )}
 
   return (
     <div className="App">
