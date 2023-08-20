@@ -36,25 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.hrs {
-  margin-right: 20px;
-}
-
-.mins {
-  margin-right: 20px;
-}
-
-.start {
-  margin-right: 20px;
-}
-
-.stop {
-  margin-left: 20px;
-}
-
-.div2o {
-  height: 180px;
-  width: 300px;
-  padding: 30px;
-}
