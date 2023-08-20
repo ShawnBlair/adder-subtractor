@@ -66,7 +66,7 @@ function checc(){
 }
 function display(){  
   setState(state => {state.map(stat => (
-    alist.push({...stat, value: stat.value})
+    alist.push({...stat, value: ""})
   ))
   return alist} )
 }
