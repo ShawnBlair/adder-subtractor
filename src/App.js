@@ -40,11 +40,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h2>Timer</h2>
-        <span>{Math.trunc(state / 60)} hrs : </span> <span>{Math.trunc(state / 60)} mins : </span>
-      <span>{state % 60} secs</span>
-        <button onClick={start}>Start</button>
-        <button onClick={reset}>Reset</button>
-        <button onClick={stop}>Stop</button>
+        <span className="hrs">{Math.trunc(state / 60)} hrs : </span>
+        <span className="mins">{Math.trunc(state / 60)} mins : </span>
+      <span className="secs">{state % 60} secs</span>
+        <button onClick={start} className="start">Start</button>
+        <button onClick={reset} className="reset">Reset</button>
+        <button onClick={stop} className="stop">Stop</button>
       </header>
     </div>
   );
