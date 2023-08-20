@@ -40,8 +40,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h2>Timer</h2>
-        <span>{Math.trunc(state / 60)} hrs : </span>
-        <span>{Math.trunc(state / 60)} mins : </span>
+        <span>{Math.trunc(state / 60)} hrs : </span> <span>{Math.trunc(state / 60)} mins : </span>
       <span>{state % 60} secs</span>
         <button onClick={start}>Start</button>
         <button onClick={reset}>Reset</button>
