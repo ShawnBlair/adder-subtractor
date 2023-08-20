@@ -81,7 +81,7 @@ function remove(){
   return (
     <div className="App">
       <header className="App-header">
-        <div><input type="text" value=""></input>
+        <div><input type="text" ></input>
         <button onClick={display}>Add</button></div>
         { sate && <button onClick={remove}>X</button>}
       </header>
