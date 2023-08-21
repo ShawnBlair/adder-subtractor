@@ -53,8 +53,8 @@ function App() {
 //                     )
 
 
-//const [state, setState] = React.useState("")
-const [state, setState] = React.useState({type:"text", name:"text1", value: ""} )
+const [state, setState] = React.useState("")
+//const [state, setState] = React.useState({type:"text", name:"text1", value: ""} )
 const [sate, setSate] = React.useState(false)
 
 const alist = []
@@ -72,8 +72,8 @@ function display(){
   //   alist.push({...stat, value: stat.value})
   // ))
   // return alist} )
-  //setState(state =>({...state, value: state.name.value}))
-  console.log("hhere")
+  //setState(state => )
+  console.log(state)
 }
 
 function remove(){
@@ -87,7 +87,7 @@ function remove(){
   return (
     <div className="App">
       <header className="App-header">
-        <div><input type="text" name="text1" id={1} placeholder='biz'></input>
+        <div><input type="text" name="text1" id={1} placeholder='biz' onChange={display}></input>
         <button onClick={display}>Add</button></div>
         { <ul><li></li></ul> && <button onClick={remove}>X</button>}
       </header>
