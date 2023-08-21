@@ -73,9 +73,9 @@ function display(){
   // ))
   // return alist} )
   //setState(state =>({...state, value: state.name.value}))
-  console.log("hh")
+  
 }
-
+console.log("hh")
 function remove(){
   setState(state => {state.map(stat => (
     alist.pop({...stat, value: stat.value})
