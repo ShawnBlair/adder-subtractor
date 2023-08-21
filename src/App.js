@@ -73,7 +73,7 @@ function display(){
   // ))
   // return alist} )
   //setState(state =>({...state, value: state.name.value}))
-  console.log("hh")
+  console.log("hhere")
 }
 
 function remove(){
@@ -87,7 +87,7 @@ function remove(){
   return (
     <div className="App">
       <header className="App-header">
-        <div><input type="text" name="text1" id={1} ></input>
+        <div><input type="text" name="text1" id={1} placeholder='biz'></input>
         <button onClick={display}>Add</button></div>
         { <ul><li></li></ul> && <button onClick={remove}>X</button>}
       </header>
