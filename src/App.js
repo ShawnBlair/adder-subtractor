@@ -55,32 +55,20 @@ function App() {
 
 const [state, setState] = React.useState("")
 //const [state, setState] = React.useState({type:"text", name:"text1", value: ""} )
-const [sate, setSate] = React.useState(false)
+const [sate, setSate] = React.useState(state)
 
-const alist = []
-function checc(){
-  if(alist.length > 0){
-    setSate(true)
-  }else{
-    setSate(false)
-  } return sate
+function display(event){
+  setState(event.target.value)
+  
 }
 
-
-function display(){  
-  // setState(state => {state.map(stat => (
-  //   alist.push({...stat, value: stat.value})
-  // ))
-  // return alist} )
-  //setState(state => )
-  console.log(state)
+function display2(){
+  setSate(state)
+  //console.log(state)
 }
 
 function remove(){
-  setState(state => {state.map(stat => (
-    alist.pop({...stat, value: stat.value})
-  ))
-  return alist})
+  
 }
 //{ sate && <button onClick={remove}>X</button>}
 
@@ -88,8 +76,8 @@ function remove(){
     <div className="App">
       <header className="App-header">
         <div><input type="text" name="text1" id={1} placeholder='biz' onChange={display}></input>
-        <button onClick={display}>Add</button></div>
-        { <ul><li></li></ul> && <button onClick={remove}>X</button>}
+        <button onClick={display2}>Add</button></div>
+         <ul><li>{display2} && <button onClick={remove}>X</button></li></ul>
       </header>
     </div>
   );
