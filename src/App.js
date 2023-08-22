@@ -68,7 +68,14 @@ function display2(){
   //console.log(state)
   setR(true)
   // tried event.target.value here. Didn't work - setState()
+  //bado setState(target.value)
 }
+
+function reset(){
+if(r === true){
+  setR(false)
+  setState("")
+}}
 
 function remove(){
   
