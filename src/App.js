@@ -58,10 +58,6 @@ const [state, setState] = React.useState("")
 const [sate, setSate] = React.useState(state)
 const [r, setR] = React.useState(false)
 
-function toggle(){
-  setR(!r)
-}
-
 function display(event){
   setState(event.target.value)
   
@@ -70,7 +66,7 @@ function display(event){
 function display2(){
   setSate(state)
   //console.log(state)
-  return state
+  setR(true) 
 }
 
 function remove(){
@@ -83,7 +79,7 @@ function remove(){
       <header className="App-header">
         <div><input type="text" name="text1" id={1} placeholder='biz' onChange={display}></input>
         <button onClick={display2}>Add</button></div>
-          <ul><li>{state}  <button onClick={remove}>X</button></li></ul>
+          { r ? <ul><li>{state}  <button onClick={remove}>X</button></li></ul> && {setState(state => {""})} : false}
       </header>
     </div>
   );
