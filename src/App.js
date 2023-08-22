@@ -66,7 +66,11 @@ function display(event){
 function display2(){
   setSate(state)
   //console.log(state)
-  setR(true) 
+  setR(true)
+}
+
+const y = function display3(){
+  setSate("")
 }
 
 function remove(){
@@ -79,7 +83,8 @@ function remove(){
       <header className="App-header">
         <div><input type="text" name="text1" id={1} placeholder='biz' onChange={display}></input>
         <button onClick={display2}>Add</button></div>
-          { r ? <ul><li>{state}  <button onClick={remove}>X</button></li></ul> && {setState(state => {""})} : false}
+          { r ? <ul><li>{state}  <button onClick={remove}>X</button></li></ul> : false}
+          
       </header>
     </div>
   );
