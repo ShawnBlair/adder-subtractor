@@ -67,10 +67,7 @@ function display2(){
   setSate(state)
   //console.log(state)
   setR(true)
-}
-
-const y = function display3(){
-  setSate("")
+  // tried event.target.value here. Didn't work - setState()
 }
 
 function remove(){
