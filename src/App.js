@@ -56,6 +56,11 @@ function App() {
 const [state, setState] = React.useState("")
 //const [state, setState] = React.useState({type:"text", name:"text1", value: ""} )
 const [sate, setSate] = React.useState(state)
+const [r, setR] = React.useState(false)
+
+function toggle(){
+  setR(!r)
+}
 
 function display(event){
   setState(event.target.value)
@@ -65,6 +70,7 @@ function display(event){
 function display2(){
   setSate(state)
   //console.log(state)
+  return state
 }
 
 function remove(){
@@ -77,7 +83,7 @@ function remove(){
       <header className="App-header">
         <div><input type="text" name="text1" id={1} placeholder='biz' onChange={display}></input>
         <button onClick={display2}>Add</button></div>
-         <ul><li>{display2} && <button onClick={remove}>X</button></li></ul>
+          <ul><li>{state}  <button onClick={remove}>X</button></li></ul>
       </header>
     </div>
   );
