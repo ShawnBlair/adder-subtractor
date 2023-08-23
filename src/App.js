@@ -79,11 +79,11 @@ function display2(){
 }
 
 function reset(){
-//if(state === ""){
+if(r === true){
   
   //setR(false)
   setState("")
-//}
+}
 }
 
 function remove(){
@@ -99,9 +99,9 @@ function remove(){
         <button onClick={display2}>Add</button></div>
          <ul>
          {r ? <li>{state}  <button onClick={remove}>X</button></li>
-           && {reset}
+           
            : false
-           }
+           }{reset/*complex-state-arrays, forms-state-object, tenzies the last vids, controlled-inputs*/}
            </ul>          
       </header>
     </div>
