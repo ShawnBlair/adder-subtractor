@@ -60,7 +60,7 @@ const [r, setR] = React.useState(false)
 
 function display(event){
   setState(event.target.value)
-  
+  setR(false)
 }
 
 function display2(){
@@ -69,28 +69,29 @@ function display2(){
   setR(true)
   // tried event.target.value here. Didn't work - setState()
   //bado setState(target.value)
-  {<ul><li>{state}  <button onClick={remove}>X</button></li></ul>}
+  //{<ul><li>{state}  <button onClick={remove}>X</button></li></ul>}
+  //setState("")
 }
 
 function reset(){
-if(r === true){
+if(state === ""){
   
   setR(false)
-  setState("")
+  //setState("")
 }}
 
 function remove(){
   
 }
 //{ sate && <button onClick={remove}>X</button>}
-//{ r ? <ul><li>{state}  <button onClick={remove}>X</button></li></ul> : false}
+//
 
   return (
     <div className="App">
       <header className="App-header">
         <div><input type="text" name="text1" id={1} placeholder='biz' onChange={display}></input>
         <button onClick={display2}>Add</button></div>
-          
+         {r ? (<ul><li>{state}  <button onClick={remove}>X</button></li></ul>) : false}
           
       </header>
     </div>
