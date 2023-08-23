@@ -101,7 +101,8 @@ function remove(){
          {r ? <li>{state}  <button onClick={remove}>X</button></li>
            
            : false
-           }{reset/*complex-state-arrays, forms-state-object, tenzies the last vids, controlled-inputs*/}
+           }{reset/*complex-state-arrays, forms-state-object, tenzies the last vids, controlled-inputs
+           try scrimba 1st then chatgpt*/}
            </ul>          
       </header>
     </div>
