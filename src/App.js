@@ -69,10 +69,12 @@ function display2(){
   setR(true)
   // tried event.target.value here. Didn't work - setState()
   //bado setState(target.value)
+  {<ul><li>{state}  <button onClick={remove}>X</button></li></ul>}
 }
 
 function reset(){
 if(r === true){
+  
   setR(false)
   setState("")
 }}
@@ -81,13 +83,14 @@ function remove(){
   
 }
 //{ sate && <button onClick={remove}>X</button>}
+//{ r ? <ul><li>{state}  <button onClick={remove}>X</button></li></ul> : false}
 
   return (
     <div className="App">
       <header className="App-header">
         <div><input type="text" name="text1" id={1} placeholder='biz' onChange={display}></input>
         <button onClick={display2}>Add</button></div>
-          { r ? <ul><li>{state}  <button onClick={remove}>X</button></li></ul> : false}
+          
           
       </header>
     </div>
