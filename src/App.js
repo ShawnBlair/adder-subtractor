@@ -55,7 +55,7 @@ function App() {
 
 const [state, setState] = React.useState("")
 //const [state, setState] = React.useState({type:"text", name:"text1", value: ""} )
-const [sate, setSate] = React.useState([state])
+const [sate, setSate] = React.useState([])
 const [r, setR] = React.useState(false)
 
 function display(event){
@@ -64,45 +64,56 @@ function display(event){
 }
 
 function display2(){
-  //if(r===false){
-    //const v = 
-  console.log(setSate(sate => sate.push(sate.map(sat => <li>{state}</li>))))
-  //console.log(state)
+  //if(state.trim()!==""){
+  //const v = 
+  /////////////////////////////////////////////////////////////////////////////setSate(sate => {sate.push(state)})
+  setSate([...sate, state])
   ////////////////////////////////////////////////////////////////////////////////////////setR(true)//}
   // else{
-  //   setR(false)
-  //   setState("")
-  // }
+  setR(true)
+    setState("")
+   //}
   // tried event.target.value here. Didn't work - setState()
   //bado setState(target.value)
   //return <ul><li>{state}  <button onClick={remove}>X</button></li></ul>
   //setState("")
 }
 
+//const eleg = sate.map(sat => <li>{state}</li>)
+
 function reset(){
 if(r === true){
   
   //setR(false)
-  setState("")
+  //setState("")
 }
 }
 
-function remove(){
-  
+function remove(event){
+  //for(let i = 0; i < sate.length; i++){
+//   let b = []
+//   b = sate.filter(sat => sat!==event.target.value)
+// return b
+
+//var array = this.state.people;
+
+  var index = sate.indexOf(event.target.value); // Let's say it's Bob.
+  delete sate[index];
+
 }
+//}
 //{ sate && <button onClick={remove}>X</button>}
 //{r ? (<ul><li>{state}  <button onClick={remove}>X</button></li></ul>) : false}
 //{r ? <li>{state}  <button onClick={remove}>X</button></li>: false}
+//{eleg}
   return (
     <div className="App">
       <header className="App-header">
-        <div><input type="text" name="text1" id={1} placeholder='biz' onChange={display}></input>
-        <button onClick={display2}>Add</button></div>
+        <div><input type="text" value={state} placeholder='biz' onChange={display}></input>
+        <button onClick={display2}>Add</button></div>        
          <ul>
          
-           
-           {reset/*complex-state-arrays, forms-state-object, tenzies the last vids, controlled-inputs
-           try scrimba 1st then chatgpt*/}
+           {sate.map((sat, index) => (<li key={index}>{sat} <button onClick={remove}>X</button></li>))}
            </ul>          
       </header>
     </div>
