@@ -55,19 +55,20 @@ function App() {
 
 const [state, setState] = React.useState("")
 //const [state, setState] = React.useState({type:"text", name:"text1", value: ""} )
-const [sate, setSate] = React.useState(state)
+const [sate, setSate] = React.useState([state])
 const [r, setR] = React.useState(false)
 
 function display(event){
+  //setState(state => {state.map(stat =>([event.target.value]))})
   setState(event.target.value)
-  
 }
 
 function display2(){
   //if(r===false){
-  setSate(state)
+    //const v = 
+  console.log(setSate(sate => sate.push(sate.map(sat => <li>{state}</li>))))
   //console.log(state)
-  setR(true)//}
+  ////////////////////////////////////////////////////////////////////////////////////////setR(true)//}
   // else{
   //   setR(false)
   //   setState("")
@@ -91,17 +92,16 @@ function remove(){
 }
 //{ sate && <button onClick={remove}>X</button>}
 //{r ? (<ul><li>{state}  <button onClick={remove}>X</button></li></ul>) : false}
-
+//{r ? <li>{state}  <button onClick={remove}>X</button></li>: false}
   return (
     <div className="App">
       <header className="App-header">
         <div><input type="text" name="text1" id={1} placeholder='biz' onChange={display}></input>
         <button onClick={display2}>Add</button></div>
          <ul>
-         {r ? <li>{state}  <button onClick={remove}>X</button></li>
+         
            
-           : false
-           }{reset/*complex-state-arrays, forms-state-object, tenzies the last vids, controlled-inputs
+           {reset/*complex-state-arrays, forms-state-object, tenzies the last vids, controlled-inputs
            try scrimba 1st then chatgpt*/}
            </ul>          
       </header>
