@@ -89,7 +89,7 @@ if(r === true){
 }
 }
 
-function remove(event){
+function remove(id, event){
   //for(let i = 0; i < sate.length; i++){
 //   let b = []
 //   b = sate.filter(sat => sat!==event.target.value)
@@ -98,8 +98,8 @@ function remove(event){
 //var array = this.state.people;
 
   var index = sate.indexOf(event.target.value); // Let's say it's Bob.
-  delete sate[index];
-
+  //delete sate[index];
+console.log(index)
 }
 //}
 //{ sate && <button onClick={remove}>X</button>}
