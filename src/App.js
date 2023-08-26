@@ -89,19 +89,20 @@ if(r === true){
 }
 }
 
-function remove(id, event){
-  //for(let i = 0; i < sate.length; i++){
-//   let b = []
-//   b = sate.filter(sat => sat!==event.target.value)
+function remove(id, event, index){
+  for(let i = 0; i < sate.length; i++){
+  //  let b = []
+  //  b = 
+   sate.filter(() => sate.map(sat => (sat===sate[i])))
 // return b
 
 //var array = this.state.people;
 
-  var index = sate.indexOf(event.target.value); // Let's say it's Bob.
+  //var id = sate.indexOf(event.target.value); // Let's say it's Bob.
   //delete sate[index];
-console.log(index)
+//console.log(index)
 }
-//}
+}
 //{ sate && <button onClick={remove}>X</button>}
 //{r ? (<ul><li>{state}  <button onClick={remove}>X</button></li></ul>) : false}
 //{r ? <li>{state}  <button onClick={remove}>X</button></li>: false}
