@@ -52,70 +52,39 @@ function App() {
 //                       </div>//you can redo the css for this code
 //                     )
 
+//For an input box with an add button aside. Anytime you type in data and click add, what you've typed in gets
+//displayed below inform of an unordered list (the data you type is added into the list below)
+// const [ival, setIval] = React.useState("")
+// const [iarr, setIarr] = React.useState([])
 
-const [state, setState] = React.useState("")
-//const [state, setState] = React.useState({type:"text", name:"text1", value: ""} )
-const [sate, setSate] = React.useState([])
-const [r, setR] = React.useState(false)
+// function handleChange(event){
+// setIval(event.target.value)
+// }
 
-function display(event){
-  //setState(state => {state.map(stat =>([event.target.value]))})
-  setState(event.target.value)
-}
+// function add(){
+// setIarr([...iarr,ival])
+// setIval("")
+// }
 
-function display2(){
-  //if(state.trim()!==""){
-  //const v = 
-  /////////////////////////////////////////////////////////////////////////////setSate(sate => {sate.push(state)})
-  setSate([...sate, state])
-  ////////////////////////////////////////////////////////////////////////////////////////setR(true)//}
-  // else{
-  setR(true)
-    setState("")
-   //}
-  // tried event.target.value here. Didn't work - setState()
-  //bado setState(target.value)
-  //return <ul><li>{state}  <button onClick={remove}>X</button></li></ul>
-  //setState("")
-}
+// function remove(index){
+//   const newarr = iarr.filter((_,i) => (i !== index))
+//   setIarr(newarr)
+// }
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <div><input type='text' onChange={handleChange} value={ival}></input> <button onClick={add}>Add</button></div>
+//         <ul>
+//           {iarr.map((iarr1,index) =>( <li key={index}>{iarr1} <button onClick={() => remove(index)}>X</button></li>))}
+//           </ul>         
+//       </header>
+//     </div>
+//   );
 
-//const eleg = sate.map(sat => <li>{state}</li>)
-
-function reset(){
-if(r === true){
-  
-  //setR(false)
-  //setState("")
-}
-}
-
-function remove(id, event, index){
-  for(let i = 0; i < sate.length; i++){
-  //  let b = []
-  //  b = 
-   sate.filter(() => sate.map(sat => (sat===sate[i])))
-// return b
-
-//var array = this.state.people;
-
-  //var id = sate.indexOf(event.target.value); // Let's say it's Bob.
-  //delete sate[index];
-//console.log(index)
-}
-}
-//{ sate && <button onClick={remove}>X</button>}
-//{r ? (<ul><li>{state}  <button onClick={remove}>X</button></li></ul>) : false}
-//{r ? <li>{state}  <button onClick={remove}>X</button></li>: false}
-//{eleg}
   return (
     <div className="App">
       <header className="App-header">
-        <div><input type="text" value={state} placeholder='biz' onChange={display}></input>
-        <button onClick={display2}>Add</button></div>        
-         <ul>
-         
-           {sate.map((sat, index) => (<li key={index}>{sat} <button onClick={remove}>X</button></li>))}
-           </ul>          
+                
       </header>
     </div>
   );
