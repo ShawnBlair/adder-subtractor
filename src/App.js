@@ -82,30 +82,23 @@ function App() {
 //     </div>
 //   );
 
-const [formval, setFormval] = React.useState({username:"", fullname:"", age:""})
-const [formarr, setFormarr] = React.useState([])
+const [rec, setRec] = React.useState("")
 
 function handleChange(event){
-  setFormval(formval => ({...formval, [event.target.name]: event.target.value}))
+setRec(event.target.value)
 }
 
-function submit(index){
-setFormarr([...formarr, formval])
-setFormval({username:"", fullname:"", age:""})
+function solveIt(){
+  setRec(rec * 1.2)
+  
 }
-
+const styles = {color: `blue`, width: `${rec}px`}
   return (
     <div className="App">
       <header className="App-header">
-        <h5>UserName</h5><input type="text" placeholder='Username' name="username" onChange={handleChange} value={formval.username}></input>
-        <h5>FullName</h5><input type="text" placeholder='Fullname' name="fullname" onChange={handleChange} value={formval.fullname}></input>
-        <h5>Age</h5><input type="text" placeholder='Age' name="age" onChange={handleChange} value={formval.age}></input><br/>
-        <button onClick={(index) => submit()}>Submit</button>
-        <h1>Request sent to DB with the request data below</h1>
-        <ul>
-          {formarr.map((formarr1, index) => 
-          <div key={index}><li>UserName:{formarr1.username}</li><li>FullName:{formarr1.fullname}</li><li>Age:{formarr1.age}</li></div>)}
-          </ul>        
+        <h3>Progress bar</h3>
+        <div className="recta" onClick={solveIt} style={styles}></div>
+        <h6>Input Percentage:</h6><input type="text" onChange={handleChange} value={rec}></input>        
       </header>
     </div>
   );

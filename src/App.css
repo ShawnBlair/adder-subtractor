@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+.recta {
+  height: 20px;
+  width: 120px;
+  background-color: antiquewhite;
+}
