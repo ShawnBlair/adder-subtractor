@@ -54,16 +54,17 @@ function App() {
 
 //For an input box with an add button aside. Anytime you type in data and click add, what you've typed in gets
 //displayed below inform of an unordered list (the data you type is added into the list below)
-// const [ival, setIval] = React.useState("")
-// const [iarr, setIarr] = React.useState([])
+// const [ival, setIval] = React.useState("") //=> for a single input just initialise the state to a single
+//string but if it's a group you canput it in an object i.e {username:"", fullname:"", age:""}
+// const [iarr, setIarr] = React.useState([]) //=> this part can stayempty even if it's in a group situation
 
 // function handleChange(event){
-// setIval(event.target.value)
+// setIval(event.target.value) //=> GROUP setIval(ival => ({...ival, [event.target.name]: event.target.value}))
 // }
 
 // function add(){
 // setIarr([...iarr,ival])
-// setIval("")
+// setIval("") //=> For a group setIval({username:"", fullname:"", age:""})
 // }
 
 // function remove(index){
@@ -98,7 +99,7 @@ setFormval({username:"", fullname:"", age:""})
       <header className="App-header">
         <h5>UserName</h5><input type="text" placeholder='Username' name="username" onChange={handleChange} value={formval.username}></input>
         <h5>FullName</h5><input type="text" placeholder='Fullname' name="fullname" onChange={handleChange} value={formval.fullname}></input>
-        <h5>Age</h5><input type="text" placeholder='Age' name="age" onChange={handleChange} value={formval.age}></input>
+        <h5>Age</h5><input type="text" placeholder='Age' name="age" onChange={handleChange} value={formval.age}></input><br/>
         <button onClick={(index) => submit()}>Submit</button>
         <h1>Request sent to DB with the request data below</h1>
         <ul>
