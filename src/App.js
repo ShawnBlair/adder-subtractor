@@ -99,7 +99,7 @@ setFormval({username:"", fullname:"", age:""})
         <h5>UserName</h5><input type="text" placeholder='Username' name="username" onChange={handleChange} value={formval.username}></input>
         <h5>FullName</h5><input type="text" placeholder='Fullname' name="fullname" onChange={handleChange} value={formval.fullname}></input>
         <h5>Age</h5><input type="text" placeholder='Age' name="age" onChange={handleChange} value={formval.age}></input>
-        <button onClick={() => submit(index)}>Submit</button>
+        <button onClick={(index) => submit()}>Submit</button>
         <h1>Request sent to DB with the request data below</h1>
         <ul>
           {formarr.map((formarr1, index) => 
