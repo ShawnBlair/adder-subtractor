@@ -110,7 +110,7 @@ function App() {
 //   );
 
 const [num, setNum] = React.useState(0)
-const [tnum., setTnum] = React.useState(10)
+const [tnum, setTnum] = React.useState(10)
 
 function Add(){
   setNum(num + 1)
@@ -118,11 +118,12 @@ function Add(){
 
 window.timerun = setInterval(() => {
   //setTnum(tnum => {tnum - 1})
+  setTnum(tnum - 1)
     if(tnum === 0)
     {return clearInterval(window.timerun)}
-    else
-    {setTnum(tnum - 1)}
-}, 1000)
+    //else
+    //{setTnum(tnum - 1)}
+}, 100000)
 
   return (
     <div className="App">
