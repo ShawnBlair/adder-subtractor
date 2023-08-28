@@ -118,19 +118,19 @@ function Add(){
 
 window.timerun = setInterval(() => {
   //setTnum(tnum => {tnum - 1})
-  setTnum(tnum - 1)
-    if(tnum === 0)
-    {return clearInterval(window.timerun)}
+  ////////////////////////////////////////////////uncomment here first setTnum(tnum - 1)
+  if(tnum === 0)
+  {clearInterval(window.timerun)}
     //else
     //{setTnum(tnum - 1)}
-}, 100000)
+}, 1000)
 
   return (
     <div className="App">
       <header className="App-header">
         <h4>No. of Clicks until timer expires</h4>
         {num}
-        <>Time left: {tnum}seconds</>
+        <div>Time left: {tnum} seconds</div>
 
         <button onClick={Add}>+</button>        
       </header>
