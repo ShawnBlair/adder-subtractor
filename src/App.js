@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import ProgressbarPrac from "./ProgressbarPrac"
 
 function App() {
 
@@ -88,16 +89,15 @@ function handleChange(event){
 setRec(event.target.value)
 }
 
-function solveIt(){
-  setRec(rec * 1.2)
-  
-}
-const styles = {color: `blue`, width: `${rec}px`}
+
+
   return (
     <div className="App">
       <header className="App-header">
         <h3>Progress bar</h3>
-        <div className="recta" onClick={solveIt} style={styles}></div>
+
+        <ProgressBar bgcolor={"#6a1b9a"} completed={completed} />
+
         <h6>Input Percentage:</h6><input type="text" onChange={handleChange} value={rec}></input>        
       </header>
     </div>
