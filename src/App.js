@@ -83,22 +83,38 @@ function App() {
 //     </div>
 //   );
 
-const [rec, setRec] = React.useState("")
+//A Progress Bar that should fill based on the input percentage value.
+// const [rec, setRec] = React.useState(0)
+// const [completed, setCompleted] = React.useState(0);
 
-function handleChange(event){
-setRec(event.target.value)
-}
+// function handleChange(event){
+//   setCompleted(rec)
+// setRec(event.target.value)
+// //setCompleted(rec)
+// }
+
+// function calculation(){
+//   setCompleted(rec)
+// }
+
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <h3>Progress bar</h3>
+
+//         <ProgressbarPrac bgcolor={"#6a1b9a"} completed={completed} valueChanged={calculation}/>
+
+//         <h6>Input Percentage:</h6><input type="text" onChange={handleChange} onKeyUp={handleChange}></input>        
+//       </header>
+//     </div>
+//   );
 
 
 
   return (
     <div className="App">
       <header className="App-header">
-        <h3>Progress bar</h3>
-
-        <ProgressBar bgcolor={"#6a1b9a"} completed={completed} />
-
-        <h6>Input Percentage:</h6><input type="text" onChange={handleChange} value={rec}></input>        
+                
       </header>
     </div>
   );
