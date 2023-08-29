@@ -109,33 +109,38 @@ function App() {
 //     </div>
 //   );
 
-const [num, setNum] = React.useState(0)
-const [tnum, setTnum] = React.useState(10)
+//Implement a button and timmer that will start from 10 and ends at 0 and tracks the counter until the
+// timer expires and button should disapper once timer expires. UseEFFECT, setInterval and clearInterval
+//were used. useRef was supposed to be used here but useEffect did a perfect job.
+// const [num, setNum] = React.useState(0)
+// const [tnum, setTnum] = React.useState(10)
 
-function Add(){
-  setNum(num + 1)
-}
+// function Add(){
+//   setNum(num + 1)
+// }
 
-window.timerun = setInterval(() => {
-  //setTnum(tnum => {tnum - 1})
-  ////////////////////////////////////////////////uncomment here first setTnum(tnum - 1)
-  // if(tnum === 0)
-  // {clearInterval(window.timerun)}
-  if(tnum !== 0){
-    setTnum(tnum - 1)
-  }else{
-    clearInterval(window.timerun)
-  }
-}, 1000)
+// React.useEffect(() => {
+// const timerun = setInterval(() => {
+//   setTnum(tnum => ((tnum !== 0) ? tnum - 1 : setTnum(0)))
+// }, 2000)
+// return () => {clearInterval(timerun)}},[tnum])
+
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <h4>No. of Clicks until timer expires</h4>
+//         {num}
+//         <div>Time left: {tnum} seconds</div>
+//         {(tnum > 0) && <button onClick={Add}>+</button>}        
+//       </header>
+//     </div>
+//   );
+
+
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h4>No. of Clicks until timer expires</h4>
-        {num}
-        <div>Time left: {tnum} seconds</div>
-
-        <button onClick={Add}>+</button>        
+      <header className="App-header">        
       </header>
     </div>
   );
