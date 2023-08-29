@@ -119,10 +119,13 @@ function Add(){
 window.timerun = setInterval(() => {
   //setTnum(tnum => {tnum - 1})
   ////////////////////////////////////////////////uncomment here first setTnum(tnum - 1)
-  if(tnum === 0)
-  {clearInterval(window.timerun)}
-    //else
-    //{setTnum(tnum - 1)}
+  // if(tnum === 0)
+  // {clearInterval(window.timerun)}
+  if(tnum !== 0){
+    setTnum(tnum - 1)
+  }else{
+    clearInterval(window.timerun)
+  }
 }, 1000)
 
   return (
