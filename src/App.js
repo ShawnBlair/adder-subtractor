@@ -136,11 +136,16 @@ function App() {
 //     </div>
 //   );
 
-
+const [clear, setClear] = React.useState(true)
+const styles = {
+  backgroundColor: (clear ? white : blue)}
 
   return (
     <div className="App">
-      <header className="App-header">        
+      <header className="App-header">
+        <div className="box" style={styles}>
+        <h3>Current Theme: {clear ? "Light":"Dark"}</h3>
+        <button>Light</button> <button>Dark</button></div>      
       </header>
     </div>
   );
