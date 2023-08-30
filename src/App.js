@@ -136,16 +136,23 @@ function App() {
 //     </div>
 //   );
 
-const [clear, setClear] = React.useState(true)
-const styles = {
-  backgroundColor: (clear ? white : blue)}
+const [number, setNumber] = React.useState(0)
+
+function add(){
+  setNumber(number => number + 1)  
+}
+
+function subtract(){
+  setNumber(number => number - 1)  
+}
 
   return (
     <div className="App">
       <header className="App-header">
-        <div className="box" style={styles}>
-        <h3>Current Theme: {clear ? "Light":"Dark"}</h3>
-        <button>Light</button> <button>Dark</button></div>      
+        
+        <div className="big-div"><div className="number-div">{number}</div>
+        <button onClick={add} className="add-b">+</button>
+        <button onClick={subtract} className="sub-b">-</button></div>      
       </header>
     </div>
   );
