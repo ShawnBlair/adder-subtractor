@@ -151,8 +151,8 @@ function subtract(){
       <header className="App-header">
         
         <div className="big-div"><div className="number-div"><h2>{number}</h2></div>
-        <button onClick={add} className="add-b"><h1>+</h1></button>
-        <button onClick={subtract} className="sub-b"><h1>-</h1></button></div>      
+        <button onClick={subtract} className="add-b"><h1>-</h1></button>
+        <button onClick={add} className="sub-b"><h1>+</h1></button></div>      
       </header>
     </div>
   );
