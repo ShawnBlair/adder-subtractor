@@ -41,35 +41,39 @@
 .number-div {
 background-color: white;
 color: black;
-height:80px;
-width: 80px;
+height:180px;
+width: 180px;
 display: flex;
 flex-direction: column;
 justify-content: center;
-border-radius: 40px;
+border-radius: 90px;
 border: none;
 margin-left: 40px;
+font-size: 30px;
 }
 
 .add-b {
   background-color: black;
   color: white;
-  height:80px;
-width: 80px;
-border-radius: 40px;
+  height:100px;
+width: 100px;
+border-radius: 50px;
 border: none;
 position: absolute;
-bottom: 220px;
-right: 660px;
+bottom: 175px;
+right: 680px;
+font-size: large;
 }
 
 .sub-b {
   background-color: black;
   color: white;
-  height:80px;
-width: 80px;
-border-radius: 40px;
+  height:100px;
+width: 100px;
+border-radius: 50px;
 border: none;
 position: absolute;
-bottom: 200px;
+bottom: 175px;
+left: 720px;
+font-size: large;
 }
