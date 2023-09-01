@@ -199,15 +199,16 @@ function App() {
   //   }
 
 const [number, setNumber] = React.useState(0)
-const [factor, setFactor] = React.useState(0)
+const [factor, setFactor] = React.useState()
 
 function handleChange(event){
   setNumber(event.target.value)
   setFactor( factor =>
-    {if(number === 0){
+    {for(let i = number; i >= 0 ; i--)
+      if(i === 0){
       return 1;
     }else{
-      return number * (number - 1)
+      return i * (i - 1)
     }}
   )
 }
