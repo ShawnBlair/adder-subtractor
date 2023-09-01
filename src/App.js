@@ -136,6 +136,68 @@ function App() {
 //     </div>
 //   );
 
+//THIS ONE'S FOR GITHUB. THIS IS APP.JS(ADD & SUBTRACT BUTTONS ON A VALUE)
+// const [number, setNumber] = React.useState(0)
+
+// function add(){
+//   setNumber(number => number + 1)  
+// }
+
+// function subtract(){
+//   setNumber(number => number - 1)  
+// }
+
+//   return (
+//     <div className="App">
+//       <header className="App-header">        
+//         <div className="big-div"><div className="number-div"><h2>{number}</h2></div>
+//         <button onClick={subtract} className="add-b"><h1>-</h1></button>
+//         <button onClick={add} className="sub-b"><h1>+</h1></button></div>      
+//       </header>
+//     </div>
+//   );
+
+  //THIS IS APP.CSS
+  // .number-div {
+  //   background-color: white;
+  //   color: black;
+  //   height:180px;
+  //   width: 180px;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   border-radius: 90px;
+  //   border: none;
+  //   margin-left: 40px;
+  //   font-size: 30px;
+  //   }
+    
+  //   .add-b {
+  //     background-color: black;
+  //     color: white;
+  //     height:100px;
+  //   width: 100px;
+  //   border-radius: 50px;
+  //   border: none;
+  //   position: absolute;
+  //   bottom: 175px;
+  //   right: 680px;
+  //   font-size: large;
+  //   }
+    
+  //   .sub-b {
+  //     background-color: black;
+  //     color: white;
+  //     height:100px;
+  //   width: 100px;
+  //   border-radius: 50px;
+  //   border: none;
+  //   position: absolute;
+  //   bottom: 175px;
+  //   left: 720px;
+  //   font-size: large;
+  //   }
+
 const [number, setNumber] = React.useState(0)
 
 function add(){
@@ -148,8 +210,7 @@ function subtract(){
 
   return (
     <div className="App">
-      <header className="App-header">
-        
+      <header className="App-header">        
         <div className="big-div"><div className="number-div"><h2>{number}</h2></div>
         <button onClick={subtract} className="add-b"><h1>-</h1></button>
         <button onClick={add} className="sub-b"><h1>+</h1></button></div>      
