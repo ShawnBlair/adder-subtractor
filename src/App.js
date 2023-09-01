@@ -199,21 +199,27 @@ function App() {
   //   }
 
 const [number, setNumber] = React.useState(0)
+const [factor, setFactor] = React.useState(0)
 
-function add(){
-  setNumber(number => number + 1)  
+function handleChange(event){
+  setNumber(event.target.value)
 }
 
-function subtract(){
-  setNumber(number => number - 1)  
+function factored(){
+setFactor( factor =>
+  {if(number === 0){
+    return 1;
+  }else{
+    return number * (number - 1)
+  }}
+)
 }
 
   return (
     <div className="App">
       <header className="App-header">        
-        <div className="big-div"><div className="number-div"><h2>{number}</h2></div>
-        <button onClick={subtract} className="add-b"><h1>-</h1></button>
-        <button onClick={add} className="sub-b"><h1>+</h1></button></div>      
+        <div className="number-div">The factorial of <input type='text' value={number} onChange={handleChange}></input> is {factored}</div>
+         <button>Re-Render</button>     
       </header>
     </div>
   );
