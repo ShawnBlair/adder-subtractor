@@ -198,38 +198,55 @@ function App() {
   //   font-size: large;
   //   }
 
-const [number, setNumber] = React.useState(0)
-const [factor, setFactor] = React.useState()
 
-function handleChange(event){
-  setNumber(event.target.value)
-  setFactor( factor =>
-    // {for(let i = number; i >= 0 ; i--)
-    //   if(i === 0){
-    //   return 1;
-    // }else{
-    //   return i * (i - 1)
-    // }}
-    {
-      if (number === 0) return 1;
-    let factor = 1;
-    for (let i = 1; i < number; i++) {
-        factor = factor * (i + 1);
+ 
+  const [number, setNumber] = React.useState('');
+  const [result, setResult] = React.useState('');
+
+  const calculateFactorial = (inputValue) => {
+    const num = parseInt(inputValue);
+
+    if (isNaN(num)) {
+      setResult('Please enter a valid number.');
+      return;
     }
-    return factor;
+
+    if (num < 0) {
+      setResult('Factorial is undefined for negative numbers.');
+    } else {
+      setResult(factorial(num).toString());
     }
-  )
-}
+  };
 
-function factored(){
+  const factorial = (n) => {
+    if (n === 0 || n === 1) {
+      return 1;
+    } else {
+      return n * factorial(n - 1);
+    }
+  };
 
-}
+  const handleInputChange = (e) => {
+    const inputValue = e.target.value;
+    setNumber(inputValue);
+    calculateFactorial(inputValue);
+  };
+
+  function handleChange(){
+    //const inputValue = event.target.value;
+    setNumber(number);
+    calculateFactorial(number);
+  }
+
+
+//uncomment this next time and head on to the next project. Write how it works on top
+
 
   return (
     <div className="App">
       <header className="App-header">        
-        <div className="number-div">The factorial of <input type='text' value={number} onChange={handleChange}></input> is {factor}</div>
-         <button>Re-Render</button>     
+        <div className="number-div">The factorial of <input type='text' value={number} onChange={handleInputChange}></input> is {result}</div>
+         <button onClick={handleChange}>Re-Render</button>     
       </header>
     </div>
   );
