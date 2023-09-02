@@ -204,12 +204,20 @@ const [factor, setFactor] = React.useState()
 function handleChange(event){
   setNumber(event.target.value)
   setFactor( factor =>
-    {for(let i = number; i >= 0 ; i--)
-      if(i === 0){
-      return 1;
-    }else{
-      return i * (i - 1)
-    }}
+    // {for(let i = number; i >= 0 ; i--)
+    //   if(i === 0){
+    //   return 1;
+    // }else{
+    //   return i * (i - 1)
+    // }}
+    {
+      if (number === 0) return 1;
+    let factor = 1;
+    for (let i = 1; i < number; i++) {
+        factor = factor * (i + 1);
+    }
+    return factor;
+    }
   )
 }
 
