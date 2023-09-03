@@ -199,54 +199,68 @@ function App() {
   //   }
 
 
- 
-  const [number, setNumber] = React.useState('');
-  const [result, setResult] = React.useState('');
+ //Input a number in an inputbox and have its factorial calculated instantly...you also have a button that does
+ // the same work
+// const [number, setNumber] = React.useState('');
+//   const [result, setResult] = React.useState('');
 
-  const calculateFactorial = (inputValue) => {
-    const num = parseInt(inputValue);
+//   const calculateFactorial = (inputValue) => {
+//     const num = parseInt(inputValue);
 
-    if (isNaN(num)) {
-      setResult('Please enter a valid number.');
-      return;
-    }
+//     if (isNaN(num)) {
+//       setResult('Please enter a valid number.');
+//       return;
+//     }
 
-    if (num < 0) {
-      setResult('Factorial is undefined for negative numbers.');
-    } else {
-      setResult(factorial(num).toString());
-    }
-  };
+//     if (num < 0) {
+//       setResult('Factorial is undefined for negative numbers.');
+//     } else {
+//       setResult(factorial(num).toString());
+//     }
+//   };
 
-  const factorial = (n) => {
-    if (n === 0 || n === 1) {
-      return 1;
-    } else {
-      return n * factorial(n - 1);
-    }
-  };
+//   const factorial = (n) => {
+//     if (n === 0 || n === 1) {
+//       return 1;
+//     } else {
+//       return n * factorial(n - 1);
+//     }
+//   };
 
-  const handleInputChange = (e) => {
-    const inputValue = e.target.value;
-    setNumber(inputValue);
-    calculateFactorial(inputValue);
-  };
+//   const handleInputChange = (e) => {
+//     const inputValue = e.target.value;
+//     setNumber(inputValue);
+//     calculateFactorial(inputValue);
+//   };
 
-  function handleChange(){
-    //const inputValue = event.target.value;
-    setNumber(number);
-    calculateFactorial(number);
-  }
+//   function handleChange(){
+//     //const inputValue = event.target.value;
+//     setNumber(number);
+//     calculateFactorial(number);
+//   }
 
+//   return (
+//     <div className="App">
+//       <header className="App-header">        
+//         <div className="number-div">The factorial of <input type='text' value={number} onChange={handleInputChange}></input> is {result}</div>
+//          <button onClick={handleChange}>Re-Render</button>     
+//       </header>
+//     </div>
+//   );
 
-//uncomment this next time and head on to the next project. Write how it works on top
+const [count, setCount] = React.useState("")
+const [ccount, setCcount] = React.useState()
 
+function handleChange(event){
+setCount(event.target.value)
+setCcount(count.length)
+}
 
   return (
     <div className="App">
       <header className="App-header">        
-        <div className="number-div">The factorial of <input type='text' value={number} onChange={handleInputChange}></input> is {result}</div>
-         <button onClick={handleChange}>Re-Render</button>     
+        <div>Enter some text: <input type='text' onChange={handleChange}></input></div>
+        <div>Number of changes: {ccount}</div>     
       </header>
     </div>
   );
