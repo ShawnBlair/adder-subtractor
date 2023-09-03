@@ -248,29 +248,37 @@ function App() {
 //     </div>
 //   );
 
-const [count, setCount] = React.useState([0])
-const [countarr, setCountarr] = React.useState([])
+const [count, setCount] = React.useState(0)
+const [countarr, setCountarr] = React.useState([0])
 
-//function handleChange(){
-  //for(let count =0; count<25; count++){
-    let c = 0
-    let co = 0
+function handleChange(){
+  //for(let i =0; i<25; i++){
+    //let c = 0
+    //let co = 0
     //if(c < 25){
       //co = c + 1
       //count.push(co)
-setCount(
-  count !== 25 ? count + 1 : count) 
+ setCount( count =>
+     {if(count !== 25){
+      return       count + 1}
+    //works at least return count
+     
+    })
+    //setCountarr([countarr, count])
+    console.log(count)
+}
 //countarr.push(count)
+
 //}
-console.log (count)
+//console.log (countarr)
 //}
 //}
 
   return (
     <div className="App">
       <header className="App-header">        
-        <div>Welcome to React Challenges</div>
-         {count}    
+        <div onClick={handleChange}>Welcome to React Challenges</div>
+         <>{}</>    
       </header>
     </div>
   );
