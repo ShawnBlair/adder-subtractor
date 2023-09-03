@@ -248,7 +248,7 @@ function App() {
 //     </div>
 //   );
 
-const [count, setCount] = React.useState(0)
+const [count, setCount] = React.useState([0])
 const [countarr, setCountarr] = React.useState([])
 
 //function handleChange(){
@@ -258,11 +258,11 @@ const [countarr, setCountarr] = React.useState([])
     //if(c < 25){
       //co = c + 1
       //count.push(co)
-//setCount(
-  count !== 25 ? count + 1 : count//) 
-countarr.push(count)
+setCount(
+  count !== 25 ? count + 1 : count) 
+//countarr.push(count)
 //}
-console.log (countarr)
+console.log (count)
 //}
 //}
 
