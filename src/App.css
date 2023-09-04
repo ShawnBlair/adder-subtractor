@@ -38,3 +38,8 @@
   }
 }
 
+.Cdiv {
+  display: flex;
+  align-items: center;
+      
+}

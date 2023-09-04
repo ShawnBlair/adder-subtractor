@@ -264,7 +264,7 @@ function handleChange(){
     <div className="App">
       <header className="App-header">        
         <div>Welcome to React Challenges</div>
-         <>{count}</>    
+         <div className="Cdiv">{count}</div>    
       </header>
     </div>
   );
