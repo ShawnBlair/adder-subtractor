@@ -264,7 +264,8 @@ function handleChange(){
     <div className="App">
       <header className="App-header">        
         <div>Welcome to React Challenges</div>
-         <div className="Cdiv"><div>{count}</div></div>    
+         <div className="Cdiv">{count.map(count1 => (<div>{count1}</div>))}
+          </div>    
       </header>
     </div>
   );
