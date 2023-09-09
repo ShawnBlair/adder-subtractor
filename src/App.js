@@ -248,23 +248,24 @@ function App() {
 //     </div>
 //   );
 
-const [count, setCount] = React.useState([])
-//const [countarr, setCountarr] = React.useState([0])
+const [number, setNumber] = React.useState(window.length)
 
-for(let i = 0; i < 26; i++){
-  count.push(i)
-}
-
-function handleChange(){   
-    
-    
-}
+React.useEffect(
+  ()=>{
+window.addEventListener("resize", ()=>{
+  setNumber(window.length)
+})
+return (window.removeEventListener("resize", ()=>{
+  setNumber(window.length)
+}))
+  },[number]
+)
 
   return (
     <div className="App">
       <header className="App-header">        
-        <div>Welcome to React Challenges</div>
-         <div className="Cdiv">{count.map(count1 => (<div>{count1}</div>))}
+        <div>Width:{number}px</div>
+         <div>Resize the window to see dynamic width
           </div>    
       </header>
     </div>
