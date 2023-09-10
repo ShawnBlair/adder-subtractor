@@ -254,11 +254,12 @@ React.useEffect(
   ()=>{
 window.addEventListener("resize", ()=>{
   setNumber(window.innerHeight)
+  console.log("resized")
 })
 return (window.removeEventListener("resize", ()=>{
   setNumber(window.innerHeight)
 }))
-  },[]
+  },[number]
 )
 
   return (
