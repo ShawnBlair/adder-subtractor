@@ -248,6 +248,32 @@ function App() {
 //     </div>
 //   );
 
+
+//Create a custom hook to track the dimensions of users window while resizing. The window width is updated
+//everytime you enlarge or shrink the window
+// const [number, setNumber] = React.useState(window.innerWidth)
+
+// React.useEffect(
+//   ()=>{
+// window.addEventListener("resize", ()=>{
+//   setNumber(window.innerWidth)
+// })
+// return (window.removeEventListener("resize", ()=>{
+//   setNumber(window.innerWidth)
+// }))
+//   },[number]
+// )
+
+//   return (
+//     <div className="App">
+//       <header className="App-header">        
+//         <div>Width:{number}px</div>
+//          <div>Resize the window to see dynamic width
+//           </div>    
+//       </header>
+//     </div>
+//   );
+
 const [number, setNumber] = React.useState(window.innerWidth)
 
 React.useEffect(
