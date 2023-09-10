@@ -272,25 +272,25 @@ function App() {
 //     </div>
 //   );
 
-const [number, setNumber] = React.useState(window.innerWidth)
+const [number, setNumber] = React.useState(1)
+const [info, setInfo] = React.useState({data})
 
 React.useEffect(
   ()=>{
-window.addEventListener("resize", ()=>{
-  setNumber(window.innerWidth)
-})
-return (window.removeEventListener("resize", ()=>{
-  setNumber(window.innerWidth)
-}))
+fetch(`https://swapi.dev/api/people/${number}`)
+            .then(res => res.json())
+            .then(data => setInfo(data))
   },[number]
 )
 
   return (
     <div className="App">
       <header className="App-header">        
-        <div>Width:{number}px</div>
-         <div>Resize the window to see dynamic width
-          </div>    
+        <div>StarWars Characters Info</div>
+         <div>{info}
+          </div>
+          <button onClick={()=>{setNumber(number => number+1)}}>Next Character</button>
+          {(number > 1) && <button onClick={()=>{setNumber(number => number-1)}}>Prev Character</button>}    
       </header>
     </div>
   );
