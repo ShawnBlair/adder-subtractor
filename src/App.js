@@ -248,16 +248,15 @@ function App() {
 //     </div>
 //   );
 
-const [number, setNumber] = React.useState(window.innerHeight)
+const [number, setNumber] = React.useState(window.innerWidth)
 
 React.useEffect(
   ()=>{
 window.addEventListener("resize", ()=>{
-  setNumber(window.innerHeight)
-  console.log("resized")
+  setNumber(window.innerWidth)
 })
 return (window.removeEventListener("resize", ()=>{
-  setNumber(window.innerHeight)
+  setNumber(window.innerWidth)
 }))
   },[number]
 )
