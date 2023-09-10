@@ -272,8 +272,31 @@ function App() {
 //     </div>
 //   );
 
+//Make an API call using useEffect and navigate through the data
+// const [number, setNumber] = React.useState(1)
+// const [info, setInfo] = React.useState([])
+
+// React.useEffect(
+//   ()=>{
+// fetch(`https://swapi.dev/api/people/${number}`)
+//             .then(res => res.json())
+//             .then(data => setInfo(data))
+//   },[number]
+// )
+
+//   return (
+//     <div className="App">
+//       <header className="App-header">        
+//         <div>StarWars Characters Info</div>
+//          <div>{JSON.stringify(info, null, 2)}</div>          
+//           <button onClick={()=>{setNumber(number => number+1)}}>Next Character</button>
+//           {(number > 1) && <button onClick={()=>{setNumber(number => number-1)}}>Prev Character</button>}    
+//       </header>
+//     </div>
+//   );
+
 const [number, setNumber] = React.useState(1)
-const [info, setInfo] = React.useState({data})
+const [info, setInfo] = React.useState([])
 
 React.useEffect(
   ()=>{
@@ -287,8 +310,7 @@ fetch(`https://swapi.dev/api/people/${number}`)
     <div className="App">
       <header className="App-header">        
         <div>StarWars Characters Info</div>
-         <div>{info}
-          </div>
+         <div>{JSON.stringify(info, null, 2)}</div>          
           <button onClick={()=>{setNumber(number => number+1)}}>Next Character</button>
           {(number > 1) && <button onClick={()=>{setNumber(number => number-1)}}>Prev Character</button>}    
       </header>
