@@ -295,24 +295,18 @@ function App() {
 //     </div>
 //   );
 
-const [number, setNumber] = React.useState(1)
-const [info, setInfo] = React.useState([])
+const [info, setInfo] = React.useState({name: fname, age:no})
 
-React.useEffect(
-  ()=>{
-fetch(`https://swapi.dev/api/people/${number}`)
-            .then(res => res.json())
-            .then(data => setInfo(data))
-  },[number]
-)
+function handleChange(){
+console.log(info)
+}
 
   return (
     <div className="App">
       <header className="App-header">        
-        <div>StarWars Characters Info</div>
-         <div>{JSON.stringify(info, null, 2)}</div>          
-          <button onClick={()=>{setNumber(number => number+1)}}>Next Character</button>
-          {(number > 1) && <button onClick={()=>{setNumber(number => number-1)}}>Prev Character</button>}    
+      <h3>Name</h3><input type='text' name='fname' value={info.name} onChange={handleChange}></input>
+      <h3>Age</h3><input type='text' name='no' value={info.age} onChange={handleChange}></input>
+      <button>Submit</button>       
       </header>
     </div>
   );
