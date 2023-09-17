@@ -296,7 +296,7 @@ function App() {
 //   );
 
 const [nset, setNset] = React.useState(true)
-const [nval, setNval] = React.useState(document.querySelector('a').href)
+//const [nval, setNval] = React.useState(document.querySelector('a').href)
 
 function display(){
   //setNval("Employee: "+document.querySelector('a').href)
@@ -307,7 +307,7 @@ function display(){
     <div className="App">
       <header className="App-header">        
        <ul>Customer
-        <li><a href='Ram' onClick={display}>Ram</a></li>
+        <li><a href='Ram' target='_blank' onClick={"Employee: "+document.querySelector('a').getAttribute('href')}>Ram</a></li>
         <li><a href='Lakshman'>Lakshman</a></li>
         <li><a href='Bheem'>Bheem</a></li>
         </ul>
