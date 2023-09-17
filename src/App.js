@@ -298,7 +298,7 @@ function App() {
 const [nset, setNset] = React.useState(true)
 //const [nval, setNval] = React.useState(document.querySelector('a').href)
 
-let href = document.querySelector('a')[0].getAttribute('href')
+let href = document.getElementsByTagName('a')[0].getAttribute('href')
 console.log(href)
 
   return (
