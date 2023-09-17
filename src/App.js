@@ -295,22 +295,21 @@ function App() {
 //     </div>
 //   );
 
-const [info, setInfo] = React.useState({fname: "", age:""})
-const [t, setT] = React.useState(true)
-
-function handleChange(event)
-{
-  setInfo({...info, [event.target.name]: event.target.value})
-
-}
-function g(){
-setT(!t)
-}
+const [nset, setNset] = React.useState(true)
   return (
     <div className="App">
       <header className="App-header">        
-      {t ?  <><h3>Name</h3><input type='text' name="fname" value={info.fname} onChange={handleChange}></input><h3>Age</h3><input type='text' name="age" value={info.age} onChange={handleChange}></input>
-      <button onClick={g}>Submit</button></> : <h3>Thanks for submitting</h3>}       
+       <ul>Customer
+        <li><a href='Ram'>Ram</a></li>
+        <li><a href='Lakshman'>Lakshman</a></li>
+        <li><a href='Bheem'>Bheem</a></li>
+        </ul>
+        <ul>Ids
+        <li><a href='1'>1</a></li>
+        <li><a href='2'>2</a></li>
+        <li><a href='3'>3</a></li>
+        <li><a href='4'>4</a></li>
+        </ul>      
       </header>
     </div>
   );
