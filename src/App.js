@@ -298,14 +298,15 @@ function App() {
 const [nset, setNset] = React.useState(true)
 //const [nval, setNval] = React.useState(document.querySelector('a').href)
 
-let href = document.getElementsByTagName('a')[0].getAttribute('href')
-console.log(href)
+window.onload = function(){let href = document.getElementsByTagName('a')[0].getAttribute('href')
+console.log(href)}
+
 
   return (
     <div className="App">
       <header className="App-header">        
        <ul>Customer
-        <li><a href='Ram' target='_blank' onClick={"Employee: "}>Ram</a></li>
+        <li><a href='Ram' onClick={"Employee: "}>Ram</a></li>
         <li><a href='Lakshman'>Lakshman</a></li>
         <li><a href='Bheem'>Bheem</a></li>
         </ul>
