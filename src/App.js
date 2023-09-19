@@ -299,18 +299,14 @@ const [nset, setNset] = React.useState({
   href: '',
 })
 
-componentDidMount() 
+function componentDidMount () 
 {
   const listItems = document.querySelectorAll('li a');
   listItems.forEach((item) => {
-    item.addEventListener('click', this.handleClick);
+    item.addEventListener('click', (event) => {const href = event.target.getAttribute('href');
+    setNset({ href });});
   });
 }
-
-handleClick = (event) => {
-  const href = event.target.getAttribute('href');
-  this.setNset({ href });
-};
 
   return ( 
     <div className="App">
@@ -325,7 +321,8 @@ handleClick = (event) => {
         <li><a href='2'>2</a></li>
         <li><a href='3'>3</a></li>
         <li><a href='4'>4</a></li>
-        </ul>      
+        </ul> 
+        <p>Clicked Href: {nset.href}</p>     
       </header>
     </div>
   );
