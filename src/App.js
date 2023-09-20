@@ -304,7 +304,8 @@ const [nset, setNset] = React.useState(
   const listItems = document.querySelectorAll('li a');
   listItems.forEach((item) => {
     item.addEventListener('click', (event) => {const href = event.target.getAttribute('href');
-    setNset( href );});
+    setNset( href );console.log(href)});
+    
   });
 //}<p>Clicked Href: {nset.href}</p>
 
