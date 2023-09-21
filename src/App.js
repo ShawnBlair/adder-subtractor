@@ -301,21 +301,28 @@ const [nset, setNset] = React.useState(
 
 //function componentDidMount () 
 //{
-  const listItems = document.querySelectorAll('li a');
-  listItems.forEach((item) => {
-    item.addEventListener('click', (event) => {//const href = event.target.getAttribute('href');
-    //setNset( href );
-    console.log(event.target.getAttribute('href'))});
+  // const listItems = document.querySelectorAll('li a');
+  // listItems.forEach((link) => {
+  //   link.addEventListener('click', (event) => {//const href = event.target.getAttribute('href');
+  //   //setNset( href );
+  //   console.log(event.target.href)});
     
-  });
+  // });
 //}<p>Clicked Href: {nset.href}</p>
+
+function handleClick(event){
+event.preventDefault()
+const href = event.target.getAttribute('href');
+setNset(href)
+//console.log(href)
+}
 
   return ( 
     <div className="App">
       <header className="App-header">        
        <ul>Customer
-        <li><a href='#Ram'>Ram</a></li>
-        <li><a href='Lakshman'>Lakshman</a></li>
+        <li><a href={`/destination?#Ram=${encodeURIComponent(nset)}`} onClick={handleClick}>Ram</a></li>
+        <li><a href='Lakshman' id="myL">Lakshman</a></li>
         <li><a href='Bheem'>Bheem</a></li>
         </ul>
         <ul>Id's
@@ -324,7 +331,7 @@ const [nset, setNset] = React.useState(
         <li><a href='3'>3</a></li>
         <li><a href='4'>4</a></li>
         </ul> <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
-        <p id='Ram'>Clicked Href: {nset}</p>     
+             
       </header>
     </div>
   );
