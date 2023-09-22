@@ -3,14 +3,6 @@ import './App.css';
 import React from 'react';
 import ProgressbarPrac from "./ProgressbarPrac"
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  useParams
-} from "react-router-dom";
-
 function App() {
 
 {/* <img src={logo} className="App-logo" alt="logo" />
@@ -303,6 +295,8 @@ function App() {
 //     </div>
 //   );
 
+//IF YOU WANT TO DISPLAY YOUR HREF VALUE ON A WEBPAGE EASILY CHECK THE METHOD useParams() AND OR CHECK REACT
+//CHALLENGES->ROUTER->URLPARAMETERS
 const [nset, setNset] = React.useState(
    ''
 )
@@ -325,23 +319,22 @@ setNset(href)
 //console.log(href)
 }
 
-const Employee = () => {
-  const { name } = useParams();
-
-  return (
-    <div className="display">
-      <h3>Employee: {name}</h3>
-    </div>
-  );
-};
-//<a href='Lakshman' id="myL">Lakshman</a>
+// const Employee = () => {
+//   const { name } = useParams();
+//   return (
+//     <div className="display">
+//       <h3>Employee: {name}</h3>
+//     </div>
+//   );
+// };
+//<Link to="/Lakshman">Lakshman</Link>
   return ( 
     <div className="App">
       <header className="App-header">        
        <ul>Customer
-        <li><a href={`/destination?#Ram=${encodeURIComponent(nset)}`} onClick={handleClick}>Ram</a></li>
+        <li><a href={`Ram`} onClick={handleClick} target='_blank'>Ram</a></li>
         <li>
-        <Link to="/Lakshman">Lakshman</Link></li>
+        <a href='Lakshman' onClick={handleClick}>Lakshman</a></li>
         <li><a href='Bheem'>Bheem</a></li>
         </ul>
         <ul>Id's
@@ -350,7 +343,7 @@ const Employee = () => {
         <li><a href='3'>3</a></li>
         <li><a href='4'>4</a></li>
         </ul> <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
-             
+        <p>Clicked Href: {nset}</p>     
       </header>
     </div>
   );
