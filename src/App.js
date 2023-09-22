@@ -3,6 +3,14 @@ import './App.css';
 import React from 'react';
 import ProgressbarPrac from "./ProgressbarPrac"
 
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  useParams
+} from "react-router-dom";
+
 function App() {
 
 {/* <img src={logo} className="App-logo" alt="logo" />
@@ -317,12 +325,23 @@ setNset(href)
 //console.log(href)
 }
 
+const Employee = () => {
+  const { name } = useParams();
+
+  return (
+    <div className="display">
+      <h3>Employee: {name}</h3>
+    </div>
+  );
+};
+//<a href='Lakshman' id="myL">Lakshman</a>
   return ( 
     <div className="App">
       <header className="App-header">        
        <ul>Customer
         <li><a href={`/destination?#Ram=${encodeURIComponent(nset)}`} onClick={handleClick}>Ram</a></li>
-        <li><a href='Lakshman' id="myL">Lakshman</a></li>
+        <li>
+        <Link to="/Lakshman">Lakshman</Link></li>
         <li><a href='Bheem'>Bheem</a></li>
         </ul>
         <ul>Id's
