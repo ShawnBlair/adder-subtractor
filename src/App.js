@@ -316,11 +316,13 @@ function handleClick(event){
 event.preventDefault()
 const href = event.target.getAttribute('href');
 setNset(href)
-return (
-<p>Clicked Href: {nset}</p>
-)
+
 //console.log(href)
 }
+
+const lala =
+  <p>Clicked Href: {nset}</p>
+  
 
 // const Employee = () => {
 //   const { name } = useParams();
@@ -335,7 +337,7 @@ return (
     <div className="App">
       <header className="App-header">        
        <ul>Customer
-        <li><a href={`Ram`} onClick={handleClick} >Ram</a></li>
+        <li><a href='Ram' onClick={handleClick} >Ram</a></li>
         <li>
         <a href='Lakshman' onClick={handleClick}>Lakshman</a></li>
         <li><a href='Bheem'>Bheem</a></li>
@@ -346,7 +348,7 @@ return (
         <li><a href='3'>3</a></li>
         <li><a href='4'>4</a></li>
         </ul> <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
-             
+<p>Clicked Href: {nset}</p>    
       </header>
     </div>
   );
