@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import ProgressbarPrac from "./ProgressbarPrac"
+import Ram from "./Ram"
 
 function App() {
 
@@ -297,9 +298,9 @@ function App() {
 
 //IF YOU WANT TO DISPLAY YOUR HREF VALUE ON A WEBPAGE EASILY CHECK THE METHOD useParams() AND OR CHECK REACT
 //CHALLENGES->ROUTER->URLPARAMETERS
-const [nset, setNset] = React.useState(
-   ''
-)
+const [nset, setNset] = React.useState('')
+const [show, setShow] = React.useState(false)
+const [nseti, setNseti] = React.useState(0)
 
 //function componentDidMount () 
 //{
@@ -315,8 +316,10 @@ const [nset, setNset] = React.useState(
 function handleClick(event){
 event.preventDefault()
 const href = event.target.getAttribute('href');
+const id = event.target.getAttribute('id');
 setNset(href)
-
+setShow(true)
+setNseti(id)
 //console.log(href)
 }
 
@@ -335,21 +338,20 @@ const lala =
 //<Link to="/Lakshman">Lakshman</Link>
   return ( 
     <div className="App">
-      <header className="App-header">        
+      {show ? <Ram nset={nset} id={nseti}/> : <header className="App-header">        
        <ul>Customer
-        <li><a href='Ram' onClick={handleClick} >Ram</a></li>
+        <li><a href='./Ram'  id='ram' onClick={handleClick} >Ram</a></li>
         <li>
-        <a href='Lakshman' onClick={handleClick}>Lakshman</a></li>
-        <li><a href='Bheem'>Bheem</a></li>
+        <a href='Lakshman' onClick={handleClick} id='l'>Lakshman</a></li>
+        <li><a href='Bheem' id='b' onClick={handleClick}>Bheem</a></li>
         </ul>
         <ul>Id's
-        <li><a href='1'>1</a></li>
-        <li><a href='2'>2</a></li>
-        <li><a href='3'>3</a></li>
-        <li><a href='4'>4</a></li>
-        </ul> <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
-<p>Clicked Href: {nset}</p>    
-      </header>
+        <li><a href='1' id={1} onClick={handleClick}>1</a></li>
+        <li><a href='2' id={2} onClick={handleClick}>2</a></li>
+        <li><a href='3' id={3} onClick={handleClick}>3</a></li>
+        <li><a href='4' id={4} onClick={handleClick}>4</a></li>
+        </ul>    
+      </header>}
     </div>
   );
 }

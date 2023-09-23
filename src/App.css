@@ -29,6 +29,11 @@
   color: #61dafb;
 }
 
+.Ram {
+  background-color: #282c34;
+  min-height: 100vh;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
