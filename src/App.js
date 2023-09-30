@@ -298,62 +298,56 @@ function App() {
 
 //IF YOU WANT TO DISPLAY YOUR HREF VALUE ON A WEBPAGE EASILY CHECK THE METHOD useParams() AND OR CHECK REACT
 //CHALLENGES->ROUTER->URLPARAMETERS
-const [nset, setNset] = React.useState('')
-const [show, setShow] = React.useState(false)
-const [nseti, setNseti] = React.useState(0)
+// const [nset, setNset] = React.useState('')
+// const [show, setShow] = React.useState(false)
+// const [nseti, setNseti] = React.useState(0)
 
-//function componentDidMount () 
-//{
-  // const listItems = document.querySelectorAll('li a');
-  // listItems.forEach((link) => {
-  //   link.addEventListener('click', (event) => {//const href = event.target.getAttribute('href');
-  //   //setNset( href );
-  //   console.log(event.target.href)});
-    
-  // });
-//}<p>Clicked Href: {nset.href}</p>
-
-function handleClick(event){
-event.preventDefault()
-const href = event.target.getAttribute('href');
-const id = event.target.getAttribute('id');
-setNset(href)
-setShow(true)
-setNseti(id)
-//console.log(href)
-}
-
-const lala =
-  <p>Clicked Href: {nset}</p>
-  
-
-// const Employee = () => {
-//   const { name } = useParams();
-//   return (
-//     <div className="display">
-//       <h3>Employee: {name}</h3>
+// function handleClick(event){
+// event.preventDefault()
+// const href = event.target.getAttribute('href');
+// const id = event.target.getAttribute('id');
+// setNset(href)
+// setShow(true)
+// setNseti(id)
+// }
+//   return ( 
+//     <div className="App">
+//       {show ? <Ram nset={nset} id={nseti}/> : <header className="App-header">        
+//        <ul>Customer
+//         <li><a href='./Ram'  id='ram' onClick={handleClick} >Ram</a></li>
+//         <li>
+//         <a href='Lakshman' onClick={handleClick} id='l'>Lakshman</a></li>
+//         <li><a href='Bheem' id='b' onClick={handleClick}>Bheem</a></li>
+//         </ul>
+//         <ul>Id's
+//         <li><a href='1' id={1} onClick={handleClick}>1</a></li>
+//         <li><a href='2' id={2} onClick={handleClick}>2</a></li>
+//         <li><a href='3' id={3} onClick={handleClick}>3</a></li>
+//         <li><a href='4' id={4} onClick={handleClick}>4</a></li>
+//         </ul>    
+//       </header>}
 //     </div>
 //   );
-// };
-//<Link to="/Lakshman">Lakshman</Link>
-  return ( 
-    <div className="App">
-      {show ? <Ram nset={nset} id={nseti}/> : <header className="App-header">        
-       <ul>Customer
-        <li><a href='./Ram'  id='ram' onClick={handleClick} >Ram</a></li>
-        <li>
-        <a href='Lakshman' onClick={handleClick} id='l'>Lakshman</a></li>
-        <li><a href='Bheem' id='b' onClick={handleClick}>Bheem</a></li>
-        </ul>
-        <ul>Id's
-        <li><a href='1' id={1} onClick={handleClick}>1</a></li>
-        <li><a href='2' id={2} onClick={handleClick}>2</a></li>
-        <li><a href='3' id={3} onClick={handleClick}>3</a></li>
-        <li><a href='4' id={4} onClick={handleClick}>4</a></li>
-        </ul>    
-      </header>}
-    </div>
-  );
+
+const [c, setC] = React.useState("")
+
+function sett(event){
+  event.preventDefault()
+  const href = event.target.getAttribute('href');
+  setC(href)
+}
+
+return ( 
+      <div className="App">
+        <header className="App-header">        
+         <ul>
+          <li><a href='#Home' onClick={sett}>Home</a></li>
+          <li><a href='#Settings'>Settings</a></li>
+          </ul>
+          <h2 id='Home'>{c}</h2>   
+        </header>
+      </div>
+    );
 }
 
 export default App;
