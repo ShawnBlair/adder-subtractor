@@ -341,10 +341,10 @@ return (
       <div className="App">
         <header className="App-header">        
          <ul>
-          <li><a href='#Home' onClick={sett}>Home</a></li>
+          <li><a href='Home' onClick={sett}>Home</a></li>
           <li><a href='#Settings'>Settings</a></li>
           </ul>
-          <h2 id='Home'>{c}</h2>   
+          <h2>{c}</h2>   
         </header>
       </div>
     );
