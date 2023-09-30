@@ -330,6 +330,7 @@ function App() {
 //   );
 
 const [c, setC] = React.useState("")
+const [ced, setCed] = React.useState(true)
 
 function sett(event){
   event.preventDefault()
@@ -341,8 +342,8 @@ return (
       <div className="App">
         <header className="App-header">        
          <ul>
-          <li><a href='Home' onClick={sett}>Home</a></li>
-          <li><a href='#Settings'>Settings</a></li>
+          {ced ? <><li><a href='Home' onClick={sett}>Home</a></li>
+          <li><a href='Settings' onClick={sett}>Settings</a></li></> : <h2>404</h2>}
           </ul>
           <h2>{c}</h2>   
         </header>
