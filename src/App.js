@@ -342,7 +342,7 @@ return (
       <div className="App">
         <header className="App-header">        
          <ul>
-          {ced ? <><li><a href='Home' onClick={sett}>Home</a></li>
+          {ced ? <><li><a href='Home' target="_self" onClick={sett}>Home</a></li>
           <li><a href='Settings' onClick={sett}>Settings</a></li></> : <h2>404</h2>}
           </ul>
           <h2>{c}</h2>   
