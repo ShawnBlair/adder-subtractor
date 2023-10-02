@@ -336,7 +336,8 @@ function sett(event){
   event.preventDefault()
   const href = event.target.getAttribute('href');
   setC(href)
-  href!=="Home" / href!=="Settings" ? setCed(false) : setCed(true)
+  //href!=="Home" ? setCed(false) : setCed(true)
+  //href!=="Settings" ? setCed(false) : setCed(true)
   
 }
 
