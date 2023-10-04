@@ -346,7 +346,8 @@ return (
         <header className="App-header">        
          <ul>
           {ced ? <div><li><a href='Home' target="_parent" onClick={sett}>Home</a></li>
-          <li><a href='Settings' onClick={sett}>Settings</a></li></div> : <h2>404</h2>}
+          <li><a href='Settings' onClick={sett}>Settings</a></li>
+          <li><link href='Settings2' onClick={sett}>Settings </link></li></div> : <h2>404</h2>}
           </ul>
           <h2>{c}</h2>   
         </header>
