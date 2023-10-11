@@ -329,68 +329,12 @@ function App() {
 //     </div>
 //   );
 
-const [c, setC] = React.useState("")
-const [ced, setCed] = React.useState(true)
 
-function sett(event){
-  event.preventDefault()
-  const href = event.target.getAttribute('href');
-  setC(href)
-  //href!=="Home" ? setCed(false) : setCed(true)
-  //href!=="Settings" ? setCed(false) : setCed(true)
-  
-}
-
-//let myVariable;
-
-// Define the two allowed values
-const allowedValues = ['Home', 'Settings'];
-
-// Use a loop to ensure the variable is one of the allowed values
-while (true) {
-  //myVariable = prompt('Enter a value:');
-  
-  // Check if the variable is one of the allowed values
-  if (allowedValues.includes(c)) {
-    // It's one of the allowed values, break out of the loop
-    <div><li><a href='Home' target="_blank" onClick={sett}>Home</a></li>
-          <li><a href='Settings' onClick={sett}>Settings</a></li></div>
-    break;
-  } else {
-    // It's not one of the allowed values, perform a certain condition
-    <h2>404</h2>
-  }
-}
-
-const allowedValues = ['Home', 'Settings'];
-
-//ced ? <div><li><a href='Home' target="_blank" onClick={sett}>Home</a></li>
-//<li><a href='Settings' onClick={sett}>Settings</a></li></div> : <h2>404</h2>
 
 return ( 
       <div className="App">
         <header className="App-header">        
-         <ul>
-          {
-          
-
-// Use a loop to ensure the variable is one of the allowed values
-while (true) {
-  //myVariable = prompt('Enter a value:');
-  
-  // Check if the variable is one of the allowed values
-  if (allowedValues.includes(c)) {
-    // It's one of the allowed values, break out of the loop
-    <div><li><a href='Home' target="_blank" onClick={sett}>Home</a></li>
-          <li><a href='Settings' onClick={sett}>Settings</a></li></div>
-    break;
-  } else {
-    // It's not one of the allowed values, perform a certain condition
-    <h2>404</h2>
-  }
-}}
-          </ul>
-          <h2>{c}</h2>   
+            
         </header>
       </div>
     );
