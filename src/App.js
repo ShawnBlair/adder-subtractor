@@ -329,12 +329,17 @@ function App() {
 //     </div>
 //   );
 
+const [c, setC] = React.useState(0)
 
+function fp(){
+  setC(0)
+}
 
 return ( 
       <div className="App">
         <header className="App-header">        
-            
+          <textarea>iiiiiiiiiiiiiiiiiiiiiiiiiiiiii</textarea>
+          <h3>Count: {c}</h3>  
         </header>
       </div>
     );
