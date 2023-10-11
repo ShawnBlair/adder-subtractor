@@ -329,16 +329,17 @@ function App() {
 //     </div>
 //   );
 
-const [c, setC] = React.useState(0)
+const [c, setC] = React.useState([])
 
-function fp(){
-  setC(0)
+function fp(event){  
+  setC(event.target.value)
+  console.log(c)
 }
 
 return ( 
       <div className="App">
         <header className="App-header">        
-          <textarea>iiiiiiiiiiiiiiiiiiiiiiiiiiiiii</textarea>
+          <textarea onClick={fp}>iiiiiiiiiiiiiiiiiiiiiiiiiiiiii</textarea>
           <h3>Count: {c}</h3>  
         </header>
       </div>
