@@ -330,7 +330,7 @@ function App() {
 //   );
 
 const [c, setC] = React.useState("")
-const [cc, setCc] = React.useState()
+const [cc, setCc] = React.useState(0)
 
 function fp(event){  
   setC(event.target.value)
@@ -341,7 +341,7 @@ function fp(event){
 return ( 
       <div className="App">
         <header className="App-header">        
-          <textarea onClick={fp}></textarea>
+          <textarea onInput={fp} value={c}></textarea>
           <h3>Count: {cc}</h3>  
         </header>
       </div>
