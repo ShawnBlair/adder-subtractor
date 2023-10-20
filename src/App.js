@@ -339,7 +339,7 @@ function fp(event){
 return ( 
       <div className="App">
         <header className="App-header">        
-          <textarea onClick={fp}>iiiiiiiiiiiiiiiiiiiiiiiiiiiiii</textarea>
+          <textarea onClick={fp}></textarea>
           <h3>Count: {c}</h3>  
         </header>
       </div>
