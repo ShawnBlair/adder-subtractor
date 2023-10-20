@@ -329,20 +329,32 @@ function App() {
 //     </div>
 //   );
 
-const [c, setC] = React.useState("")
-const [cc, setCc] = React.useState(0)
+//To count the length of the value in a textarea as you type use the code below
+// const [c, setC] = React.useState("")
+// const [cc, setCc] = React.useState(0)
 
-function fp(event){  
-  setC(event.target.value)
-  console.log(c)
-  setCc(c.length)
-}
+// function fp(event){  
+//   setC(event.target.value)
+  
+// }
 
-return ( 
+// React.useEffect(()=>{
+//   setCc(c.length); console.log(c)},[c]
+// )
+
+// return ( 
+//       <div className="App">
+//         <header className="App-header">        
+//           <textarea onInput={fp} value={c}></textarea>
+//           <h3>Count: {cc}</h3>  
+//         </header>
+//       </div>
+//     );
+
+    return ( 
       <div className="App">
         <header className="App-header">        
-          <textarea onInput={fp} value={c}></textarea>
-          <h3>Count: {cc}</h3>  
+           
         </header>
       </div>
     );
