@@ -351,10 +351,28 @@ function App() {
 //       </div>
 //     );
 
+const [lala, setLala] = React.useState({uname: "", upass: "", email: ""})
+
+function handleChange(event){
+  setLala({...lala, [event.target.name]: event.target.value})
+  console.log(lala)
+}
+
+function sort(){
+  if(lala.upass.length < 5){
+    window.alert("Password should be more than 5 characters")
+  } else{
+    window.alert("Data submitted successfully")
+  }
+}
+
     return ( 
       <div className="App">
         <header className="App-header">        
-           
+          Username: <input type='text'name='uname' onChange={handleChange} value={lala.uname}></input>
+          Password: <input type='text' name='upass' onChange={handleChange} value={lala.upass}></input>
+          Email: <input type='text' name='email' onChange={handleChange} value={lala.email}></input>
+          <button onClick={handleChange}>Submit</button>
         </header>
       </div>
     );
