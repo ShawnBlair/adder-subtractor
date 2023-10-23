@@ -352,16 +352,29 @@ function App() {
 //     );
 
 const [tdl, setTdl] = React.useState([])
+const [tdlv, setTdlv] = React.useState("")
+
+function handleChange(event){
+ setTdlv(event.target.value)
+}
 
 function add(){
+ setTdl(tdl => {tdl.push(tdlv)})
+}
 
+function edit(){
+
+}
+
+function delet(){
+ setTdl(tdl.pop)
 }
 
     return ( 
       <div className="App">
         <header className="App-header">
           <h2>To Do List</h2>
-          <textarea value={tdl}></textarea>
+          <textarea value={tdlv} onChange={handleChange}></textarea>
           {tdl}
           <button>Add</button><button>Edit</button><button>Delete</button>
         </header>
