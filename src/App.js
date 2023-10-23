@@ -366,11 +366,18 @@ function sort(){
   }
 }
 
+const styles = {width:"50px"}
+const styles2 = {display: "none"}
+
     return ( 
       <div className="App">
         <header className="App-header">
-          <button>Home</button><select type='dropdown'>About</select>
-          <hr/>       
+          <div><select name='home' ><option value="Home">Home</option></select>
+          <select name='about'><option value="About">About</option>
+          </select><select name='services'><option >Services</option>
+          <option value="navbar">Navbar</option><option >menu</option></select><select name='contacts'><option >Contacts</option>
+          <option >b</option><option >a</option></select></div>
+          <hr style={styles}/>       
           Username: <input type='text'name='uname' onChange={handleChange} value={lala.uname}></input>
           Password: <input type='password' name='upass' onChange={handleChange} value={lala.upass}></input>
           Email: <input type='text' name='email' onChange={handleChange} value={lala.email}></input>
