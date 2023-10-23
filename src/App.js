@@ -351,14 +351,19 @@ function App() {
 //       </div>
 //     );
 
+const [tdl, setTdl] = React.useState([])
 
+function add(){
 
-
+}
 
     return ( 
       <div className="App">
         <header className="App-header">
-          
+          <h2>To Do List</h2>
+          <textarea value={tdl}></textarea>
+          {tdl}
+          <button>Add</button><button>Edit</button><button>Delete</button>
         </header>
       </div>
     );
