@@ -355,12 +355,12 @@ const [lala, setLala] = React.useState({uname: "", upass: "", email: ""})
 
 function handleChange(event){
   setLala({...lala, [event.target.name]: event.target.value})
-  console.log(lala)
+  //sort()
 }
 
 function sort(){
   if(lala.upass.length < 5){
-    window.alert("Password should be more than 5 characters")
+    window.alert("Password should be more than 5 characters"); return
   } else{
     window.alert("Data submitted successfully")
   }
@@ -372,7 +372,7 @@ function sort(){
           Username: <input type='text'name='uname' onChange={handleChange} value={lala.uname}></input>
           Password: <input type='text' name='upass' onChange={handleChange} value={lala.upass}></input>
           Email: <input type='text' name='email' onChange={handleChange} value={lala.email}></input>
-          <button onClick={handleChange}>Submit</button>
+          <button onClick={sort}>Submit</button>
         </header>
       </div>
     );
