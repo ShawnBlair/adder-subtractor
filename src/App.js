@@ -358,24 +358,28 @@ function handleChange(event){
  setTdlv(event.target.value)
 }
 
+function handleEdit(tldv){
+tdl.map(tdl1 => {tdl1 === tdlv ? <textarea value={tldv} name='t1'></textarea> : tdl1})
+}
+
 function add(){
- setTdl(tdl => {tdl.push(tdlv)})
+ setTdl(tdl.push(tdlv))
 }
 
-function edit(){
-
+function edit(tldv){
+tdl.map(tdl1 => {tdl1 === tdlv ? tdlv : tdl1})
 }
 
-function delet(){
- setTdl(tdl.pop)
+function delet(tldv){
+ tdl.map(tdl1 => {tdl1 === tdlv ? tdl.pop(tdl1) : tdl1})
 }
 
     return ( 
       <div className="App">
         <header className="App-header">
           <h2>To Do List</h2>
-          <textarea value={tdlv} onChange={handleChange}></textarea>
-          {tdl}
+          <textarea value={tdlv} onChange={handleChange} name='t1'></textarea>
+          <div onClick={handleEdit}>{tdl}</div>
           <button>Add</button><button>Edit</button><button>Delete</button>
         </header>
       </div>
