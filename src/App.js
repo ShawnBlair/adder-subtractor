@@ -359,19 +359,19 @@ function handleChange(event){
 }
 
 function handleEdit(tldv){
-tdl.map(tdl1 => {tdl1 === tdlv ? <textarea value={tldv} name='t1'></textarea> : tdl1})
+setTdlv(tdlv => {return (tdl.map(tdl1 => (tdl1 === tdlv ? <textarea value={tldv} name='t1'></textarea> : tdl1)))})
 }
 
-function add(){
- setTdl(tdl.push(tdlv))
+function add(tdlv){
+ setTdl(tdl => ({...tdl,tdlv}))//add not working check on chat. check other buttons as well
 }
 
 function edit(tldv){
-tdl.map(tdl1 => {tdl1 === tdlv ? tdlv : tdl1})
+setTdlv(tdlv =>  {(tdl.map(tdl1 => (tdl1 === tdlv ? tdlv : tdl1)))})
 }
 
 function delet(tldv){
- tdl.map(tdl1 => {tdl1 === tdlv ? tdl.pop(tdl1) : tdl1})
+ setTdl(tdl => {(tdl.map(tdl1 => tdl1 === tdlv ? tdl.pop(tdl1) : tdl1))})
 }
 
     return ( 
@@ -380,7 +380,7 @@ function delet(tldv){
           <h2>To Do List</h2>
           <textarea value={tdlv} onChange={handleChange} name='t1'></textarea>
           <div onClick={handleEdit}>{tdl}</div>
-          <button>Add</button><button>Edit</button><button>Delete</button>
+          <button onClick={add}>Add</button><button onClick={()=>edit(String)}>Edit</button><button onClick={()=>delet(String)}>Delete</button>
         </header>
       </div>
     );
