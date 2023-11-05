@@ -359,30 +359,31 @@ function handleChange(event){
  setTdlv(event.target.value)
 }
 
-function handleEdit(tldv){
-setTdlv(tdlv)
+function handleEdit(item){
+setTdlv(item)
+setItem("")
 }
 
-function add(tdlv){
- setTdl([...tdl, tdlv])//add not working check on chat. check other buttons as well
- setTdlv("")
+function add(item){
+ setTdl([...tdl, item])//add not working check on chat. check other buttons as well
+ setItem("")
 }
 
-function edit(tldv){
-setTdlv(tdlv =>  {(tdl.map(tdl1 => (tdl1 === tdlv ? tdlv : tdl1)))})
+function edit(item){
+setTdlv(tdlv =>  {(tdl.map(tdl1 => (tdl1 === item ? item : tdl1)))})
 
 }
 
-function delet(tldv){
- setTdl(tdl => tdl.filter(tdl1 => {(tdl1 !== tdlv)}))
- setTdlv("")
+function delet(item){
+ setTdl(tdl => tdl.filter(tdl1 => (tdl1 !== item)))
+ setItem("")
 }
 
     return ( 
       <div className="App">
         <header className="App-header">
           <h2>To Do List</h2>
-          <textarea value={tdlv} onChange={handleChange} name='t1'></textarea>
+          <textarea value={item} onChange={handleChange} name='t1'></textarea>
           <div onClick={handleEdit}>{tdl}</div>
           <button onClick={add}>Add</button><button onClick={edit}>Edit</button><button onClick={delet}>Delete</button>
         </header>
