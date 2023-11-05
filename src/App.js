@@ -353,25 +353,29 @@ function App() {
 
 const [tdl, setTdl] = React.useState([])
 const [tdlv, setTdlv] = React.useState("")
+const [item, setItem] = React.useState("")
 
 function handleChange(event){
  setTdlv(event.target.value)
 }
 
 function handleEdit(tldv){
-setTdlv(tdlv => {return (tdl.map(tdl1 => (tdl1 === tdlv ? <textarea value={tldv} name='t1'></textarea> : tdl1)))})
+setTdlv(tdlv)
 }
 
 function add(tdlv){
- setTdl(tdl => ({...tdl,tdlv}))//add not working check on chat. check other buttons as well
+ setTdl([...tdl, tdlv])//add not working check on chat. check other buttons as well
+ setTdlv("")
 }
 
 function edit(tldv){
 setTdlv(tdlv =>  {(tdl.map(tdl1 => (tdl1 === tdlv ? tdlv : tdl1)))})
+
 }
 
 function delet(tldv){
- setTdl(tdl => {(tdl.map(tdl1 => tdl1 === tdlv ? tdl.pop(tdl1) : tdl1))})
+ setTdl(tdl => tdl.filter(tdl1 => {(tdl1 !== tdlv)}))
+ setTdlv("")
 }
 
     return ( 
@@ -380,7 +384,7 @@ function delet(tldv){
           <h2>To Do List</h2>
           <textarea value={tdlv} onChange={handleChange} name='t1'></textarea>
           <div onClick={handleEdit}>{tdl}</div>
-          <button onClick={add}>Add</button><button onClick={()=>edit(String)}>Edit</button><button onClick={()=>delet(String)}>Delete</button>
+          <button onClick={add}>Add</button><button onClick={edit}>Edit</button><button onClick={delet}>Delete</button>
         </header>
       </div>
     );
