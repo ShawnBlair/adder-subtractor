@@ -356,7 +356,7 @@ const [tdlv, setTdlv] = React.useState("")
 const [item, setItem] = React.useState("")
 
 function handleChange(event){
- setTdlv(event.target.value)
+ setItem(event.target.value)
 }
 
 function handleEdit(item){
