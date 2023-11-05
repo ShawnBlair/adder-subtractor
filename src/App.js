@@ -351,41 +351,12 @@ function App() {
 //       </div>
 //     );
 
-const [tdl, setTdl] = React.useState([])
-const [tdlv, setTdlv] = React.useState("")
-const [item, setItem] = React.useState("")
 
-function handleChange(event){
- setItem(event.target.value)
-}
-
-function handleEdit(item){
-setTdlv(item)
-setItem(item)
-}
-
-function add(item){
- setTdl([...tdl, item])//add not working check on chat. check other buttons as well
- setItem("")
-}
-
-function edit(item){
-setTdlv(tdlv =>  {(tdl.map(tdl1 => (tdl1 === item ? item : tdl1)))})
-
-}
-
-function delet(item){
- setTdl(tdl => tdl.filter(tdl1 => (tdl1 !== item)))
- setItem("")
-}
 
     return ( 
       <div className="App">
         <header className="App-header">
-          <h2>To Do List</h2>
-          <textarea value={item} onChange={handleChange} name='t1'></textarea>
-          <div onClick={handleEdit}>{tdl}</div>
-          <button onClick={add}>Add</button><button onClick={edit}>Edit</button><button onClick={delet}>Delete</button>
+          
         </header>
       </div>
     );
