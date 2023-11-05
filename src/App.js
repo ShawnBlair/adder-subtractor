@@ -361,7 +361,7 @@ function handleChange(event){
 
 function handleEdit(item){
 setTdlv(item)
-setItem("")
+setItem(item)
 }
 
 function add(item){
