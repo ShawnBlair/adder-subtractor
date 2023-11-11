@@ -150,7 +150,9 @@ function subtract(){
 
   return (
     <div className="App">
-      <header className="App-header">        
+      <header className="App-header">
+        <p>
+          Head to the next or previous number by clicking the add '+' or subtract '-' button</p>        
         <div className="big-div"><div className="number-div"><h2>{number}</h2></div>
         <button onClick={subtract} className="add-b"><h1>-</h1></button>
         <button onClick={add} className="sub-b"><h1>+</h1></button></div>      
