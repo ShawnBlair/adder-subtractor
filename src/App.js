@@ -138,25 +138,25 @@ function App() {
 //   );
 
 //THIS ONE'S FOR GITHUB. THIS IS APP.JS(ADD & SUBTRACT BUTTONS ON A VALUE)
-// const [number, setNumber] = React.useState(0)
+const [number, setNumber] = React.useState(0)
 
-// function add(){
-//   setNumber(number => number + 1)  
-// }
+function add(){
+  setNumber(number => number + 1)  
+}
 
-// function subtract(){
-//   setNumber(number => number - 1)  
-// }
+function subtract(){
+  setNumber(number => number - 1)  
+}
 
-//   return (
-//     <div className="App">
-//       <header className="App-header">        
-//         <div className="big-div"><div className="number-div"><h2>{number}</h2></div>
-//         <button onClick={subtract} className="add-b"><h1>-</h1></button>
-//         <button onClick={add} className="sub-b"><h1>+</h1></button></div>      
-//       </header>
-//     </div>
-//   );
+  return (
+    <div className="App">
+      <header className="App-header">        
+        <div className="big-div"><div className="number-div"><h2>{number}</h2></div>
+        <button onClick={subtract} className="add-b"><h1>-</h1></button>
+        <button onClick={add} className="sub-b"><h1>+</h1></button></div>      
+      </header>
+    </div>
+  );
 
   //THIS IS APP.CSS
   // .number-div {
@@ -352,14 +352,14 @@ function App() {
 //     );
 
 
-
-    return ( 
-      <div className="App">
-        <header className="App-header">
+//THE ONE WE USE FOR TESTING
+    // return ( 
+    //   <div className="App">
+    //     <header className="App-header">
           
-        </header>
-      </div>
-    );
+    //     </header>
+    //   </div>
+    // );
 }
 
 export default App;

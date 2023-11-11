@@ -3,7 +3,7 @@
   position: relative;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -12,7 +12,7 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;
@@ -25,7 +25,7 @@
   color: white;
 }
 
-.App-link {
+/* .App-link {
   color: #61dafb;  
 }
 
@@ -41,4 +41,44 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
+
+ .number-div {
+     background-color: white;
+     color: black;
+     height:180px;
+     width: 180px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     border-radius: 90px;
+     border: none;
+     margin-left: 40px;
+     font-size: 30px;
+  }
+    
+  .add-b {
+     background-color: black;
+     color: white;
+     height:100px;
+     width: 100px;
+     border-radius: 50px;
+     border: none;
+     position: absolute;
+     bottom: 175px;
+     right: 680px;
+     font-size: large;
+  }
+    
+  .sub-b {
+     background-color: black;
+     color: white;
+     height:100px;
+     width: 100px;
+     border-radius: 50px;
+     border: none;
+     position: absolute;
+     bottom: 175px;
+     left: 720px;
+     font-size: large;
+  }
