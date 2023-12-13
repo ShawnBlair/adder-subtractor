@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Adder-Subtractor Project
+
+This is a React.js project featuring buttons for both addition and subtraction, alongside a dedicated section displaying the current number.
+Upon pressing the addition button, the number increments by one, while pressing the subtraction button results in a decrement of the displayed number.
+
 ## Available Scripts
 
 In the project directory, you can run:
