@@ -1,8 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import ProgressbarPrac from "./ProgressbarPrac"
-import Ram from "./Ram"
 
 function App() {
 const [number, setNumber] = React.useState(0)
